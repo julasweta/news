@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/news/static/css/main.a821b37d.css",
+    "main.js": "/news/static/js/main.e0f2f6ec.js",
+    "static/media/vision.png": "/news/static/media/vision.067d4ae1936d64a577ce.png",
+    "static/media/thor.jpeg": "/news/static/media/thor.533e3a5e127689ab0b1f.jpeg",
+    "static/media/abyss.jpg": "/news/static/media/abyss.93d211d37b67a60bace9.jpg",
+    "static/media/mjolnir.png": "/news/static/media/mjolnir.61f31e1809f12183a524.png",
+    "index.html": "/news/index.html",
+    "main.a821b37d.css.map": "/news/static/css/main.a821b37d.css.map",
+    "main.e0f2f6ec.js.map": "/news/static/js/main.e0f2f6ec.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a821b37d.css",
+    "static/js/main.e0f2f6ec.js"
+  ]
+}
