@@ -1,83 +1,102 @@
-import { Component } from 'react';
-import './randomChar.scss';
-import thor from '../../resources/img/thor.jpeg';
-import mjolnir from '../../resources/img/mjolnir.png';
+import { Component } from "react";
+import "./randomChar.scss";
 import NewsService from "../../services/NewsService";
-
+import Spinner from "../spinner/Spinner";
 
 class RandomChar extends Component {
-  constructor(props) {
-    super(props);
-  this.updatePost();
+  state = {
+    resItem: {},
+    loading: false,
+  };
+
+  componentDidMount() {
+    this.updatePost();
   }
-state = {
-      name: null,
-      description: 154,
-      thumbnail: null,
-      homepage: null,
-      wiki: null,
-    };
 
-
+  onLoading = () => {
+    this.setState({
+      loading: true,
+    });
+  };
+  onLoaded = () => {
+    this.setState({
+      loading: false,
+    });
+  };
+  onError = () => {
+    alert('Error')
+  }
   newsService = new NewsService();
 
-
-/* Головна новина*/
-  updatePost = (id = 2) => {
-    this.newsService.getAllPosts().then(res => {
+  /* Головна новина*/
+  updatePost = (id = 0) => {
+    this.newsService.getPost(id).then((res) => {
       this.setState({
-        name: res.articles[id].title,
-        description: res.articles[id].description,
-        thumbnail: res.articles[id].urlToImage,
-        homepage: res.articles[id].url,
-        wiki: res.articles[id].author,
+        resItem: res,
       });
     });
   };
 
-/* Зміна головної новини*/
+  /* Зміна головної новини*/
+
   changeNews = () => {
-    let number = Math.floor(Math.random() * 20);
-    this.updatePost(number)
-}
+    this.onLoading()
+    this.newsService.getAllPosts().then((res) => {
+      this.onLoaded()
+      let number = Math.floor(Math.random() * res.length);
+      this.updatePost(number);
+    });
+  };
 
   render() {
-    const { name, description, thumbnail, homepage, wiki } = this.state;
-
-
+    const { resItem, loading } = this.state;
     return (
       <div className="randomchar">
-        <div className="randomchar__block">
-          <img src={thumbnail} alt="Random character" className="randomchar__img" />
-          <div className="randomchar__info">
-            <p className="randomchar__name">{name}</p>
-            <p className="randomchar__descr">{description}...</p>
-            <div className="randomchar__btns">
-              <a href={homepage} className="button button__main">
-                <div className="inner">Детальніше</div>
-              </a>
-              <a href={thumbnail} className="button button__secondary">
-                <div className="inner">{wiki}</div>
-              </a>
-            </div>
-          </div>
-        </div>
+        {loading ? <Spinner /> : <View resItem={resItem} />}
+
         <div className="randomchar__static">
           <p className="randomchar__title">
             Переглянь інші новини
             <br />
-           Головні новини дня
+            Головні новини дня
           </p>
-          <p className="randomchar__title">Натисни тут для перегляду інших новин дня</p>
-          <button className="button button__main"
-          onClick={this.changeNews}>
+          <p className="randomchar__title">
+            Натисни тут для перегляду інших новин дня
+          </p>
+          <button className="button button__main" onClick={this.changeNews}>
             <div className="inner">Наступна новина</div>
           </button>
-          <img src={mjolnir} alt="mjolnir" className="randomchar__decoration" />
         </div>
       </div>
     );
   }
+}
+
+const View = (resItem) => {
+  return (
+    <div className="randomchar__block">
+      <img
+        src={resItem.resItem.thumbnail}
+        alt="Random character"
+        className="randomchar__img"
+      />
+      <div className="randomchar__info">
+        <p className="randomchar__name">{resItem.resItem.name}</p>
+        <p className="randomchar__descr">{resItem.resItem.description}...</p>
+        <div className="randomchar__btns">
+          <a href={resItem.resItem.homepage} className="button button__main">
+            <div className="inner">Детальніше</div>
+          </a>
+          <a
+            href={resItem.resItem.thumbnail}
+            className="button button__secondary"
+          >
+            <div className="inner">{resItem.resItem.wiki}</div>
+          </a>
+        </div>
+      </div>
+    </div>
+  );
 }
 
 export default RandomChar;

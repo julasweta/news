@@ -1,15 +1,23 @@
+import { Component } from 'react';
 import './charInfo.scss';
-import thor from '../../resources/img/thor.jpeg';
 
-const CharInfo = () => {
+class CharInfo extends Component {
+  state = {
+    item: {},
+  };
+
+
+
+
+  render() {
     return (
       <div className="char__info">
         <div className="char__basics">
-          <img src={thor} alt="abyss" />
+          <img src={this.props.item.thumbnail} alt="abyss" />
           <div>
-            <div className="char__info-name">thor</div>
+            <div className="char__info-name">{this.props.item.name}</div>
             <div className="char__btns">
-              <a href="#" className="button button__main">
+              <a href={this.props.item.homepage} className="button button__main">
                 <div className="inner">Детальніше</div>
               </a>
               <a href="#" className="button button__secondary">
@@ -18,13 +26,7 @@ const CharInfo = () => {
             </div>
           </div>
         </div>
-        <div className="char__descr">
-          Тут короткий опис новин. Тут короткий опис новин. Тут короткий опис
-          новин.Тут короткий опис новин. Тут короткий опис новин. Тут короткий
-          опис новин. Тут короткий опис новин. Тут короткий опис новин. Тут
-          короткий опис новин. Тут короткий опис новин. Тут короткий опис новин.
-          Тут короткий опис новин.
-        </div>
+        <div className="char__descr">{this.state.item.description}</div>
         <div className="char__comics">Більше новин:</div>
         <ul className="char__comics-list">
           <li className="char__comics-item">Тут ще одна новина #3</li>
@@ -40,6 +42,7 @@ const CharInfo = () => {
         </ul>
       </div>
     );
+  }
 }
 
 export default CharInfo;
