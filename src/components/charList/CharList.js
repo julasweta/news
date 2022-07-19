@@ -1,4 +1,4 @@
-import { Component } from "react";
+import React, { Component } from "react";
 import "./charList.scss";
 import NewsService from "../../services/NewsService";
 
@@ -22,6 +22,13 @@ class CharList extends Component {
       });
     });
   };
+  onLoadMore =()=> {
+    this.setState({
+      resItems: [...this.state.resItems, ...this.state.resItems],
+      loading: true,
+    });
+  }
+
 
   /*Перебираємо масиви і записуємо в кожний окремий пост */
   allItems(arr) {
@@ -45,13 +52,25 @@ class CharList extends Component {
   render() {
     return (
       <div className="char__list">
+        <Dynamic>
+          <h3>Всі Новини</h3>
+          <h3>Всі Новини</h3>
+        </Dynamic>
         {this.allItems(this.state.resItems)}
         <button className="button button__main button__long">
-          <div className="inner">load more</div>
+          <div className="inner" onClick={this.onLoadMore}>
+            load more
+          </div>
         </button>
       </div>
     );
   }
 }
-
+const Dynamic =(props) =>{
+  return <div className="b-2"> {
+    React.Children.map(props.children, child => {
+  return React.cloneElement(child, {className: 'shadow p-3 m-3 border rounded'})
+})
+  }</div>;
+ }
 export default CharList;

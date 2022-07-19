@@ -12,17 +12,8 @@ class RandomChar extends Component {
   componentDidMount() {
     this.updatePost();
   }
+ 
 
-  onLoading = () => {
-    this.setState({
-      loading: true,
-    });
-  };
-  onLoaded = () => {
-    this.setState({
-      loading: false,
-    });
-  };
   onError = () => {
     alert('Error')
   }
@@ -40,9 +31,7 @@ class RandomChar extends Component {
   /* Зміна головної новини*/
 
   changeNews = () => {
-    this.onLoading()
     this.newsService.getAllPosts().then((res) => {
-      this.onLoaded()
       let number = Math.floor(Math.random() * res.length);
       this.updatePost(number);
     });

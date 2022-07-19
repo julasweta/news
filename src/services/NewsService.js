@@ -21,18 +21,18 @@ class NewsService {
   getAllPosts = async () => {
     let url = "https://reqres.in/api/users?page=2";
     const res = await this.getResourse(url);
-    return res.data.map(this._transformData)
+    return res.data.map(this._transformData);
   };
 
   getPost = async (id = 0) => {
     let url = "https://reqres.in/api/users?page=2";
-    const res = await this.getResourse(url);        //дані з json
+    const res = await this.getResourse(url); //дані з json
     return this._transformData(res.data[id]);
   };
 
   /*дані записуємо як в  state і передаємо сюди дані в методі getPost*/
   _transformData = (res) => {
-        return {
+    return {
       name: res.first_name,
       description: res.avatar,
       thumbnail:
@@ -41,8 +41,6 @@ class NewsService {
       homepage: res.avatar,
       id: res.id,
     };
-
-
   };
 }
 export default NewsService;

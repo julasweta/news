@@ -9,27 +9,36 @@ import NewsService from "../../services/NewsService";
 class App extends Component {
   state = {
     postId: 1,
-    item: {},
+    item: {
+      name: "Зроби свій вибір - натисни на новину у блоці ліворуч",
+      description: "Зроби свій вибір",
+      thumbnail:
+        "https://cdn.pixabay.com/photo/2022/03/03/13/00/heart-7045303__480.jpg",
+      homepage: "Зроби свій вибір",
+      id: 2,
+    },
   };
-
+  componentDidMount() {
+    this.setPostId(1);
+  }
+  componentDidUpdate() {
+    this.setPostId(1);
+  }
   /* */
   newsService = new NewsService();
 
   setPostId = (id) => {
     this.newsService.getAllPosts().then((res) => {
-      res.map(item => {
+      res.map((item) => {
         if (id === item.id) {
           this.setState({
             postId: item.id,
             item: item,
           });
         }
-      })
-
+      });
     });
   };
-
-
 
   render() {
     return (
