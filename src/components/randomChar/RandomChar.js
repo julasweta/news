@@ -1,64 +1,59 @@
-import { Component } from "react";
+import {  useEffect, useState } from "react";
 import "./randomChar.scss";
 import NewsService from "../../services/NewsService";
-import Spinner from "../spinner/Spinner";
 
-class RandomChar extends Component {
-  state = {
-    resItem: {},
-    loading: false,
-  };
+const RandomChar = (props) => {
 
-  componentDidMount() {
-    this.updatePost();
-  }
- 
+  /*   */
 
-  onError = () => {
-    alert('Error')
-  }
-  newsService = new NewsService();
+
+  /*  */
+
+  const [resItem, setResItem] = useState({});
+
+  useEffect(() => {
+    updatePost(0);
+  }, [])
+
+  let newsService = new NewsService();
 
   /* Головна новина*/
-  updatePost = (id = 0) => {
-    this.newsService.getPost(id).then((res) => {
-      this.setState({
-        resItem: res,
-      });
+  const updatePost = (id = 0) => {
+    newsService.getPost(id).then((res) => {
+      setResItem(resItem => res)
     });
   };
 
   /* Зміна головної новини*/
 
-  changeNews = () => {
-    this.newsService.getAllPosts().then((res) => {
+  const changeNews = () => {
+    newsService.getAllPosts().then((res) => {
       let number = Math.floor(Math.random() * res.length);
-      this.updatePost(number);
+      updatePost(number);
     });
   };
 
-  render() {
-    const { resItem, loading } = this.state;
-    return (
-      <div className="randomchar">
-        {loading ? <Spinner /> : <View resItem={resItem} />}
 
-        <div className="randomchar__static">
-          <p className="randomchar__title">
-            Переглянь інші новини
-            <br />
-            Головні новини дня
-          </p>
-          <p className="randomchar__title">
-            Натисни тут для перегляду інших новин дня
-          </p>
-          <button className="button button__main" onClick={this.changeNews}>
-            <div className="inner">Наступна новина</div>
-          </button>
-        </div>
+  return (
+    <div className="randomchar">
+      <View resItem={resItem} />
+
+      <div className="randomchar__static">
+        <p className="randomchar__title">
+          Переглянь інші новини
+          <br />
+          Головні новини дня
+        </p>
+        <p className="randomchar__title">
+          Натисни тут для перегляду інших новин дня
+        </p>
+        <button className="button button__main" onClick={changeNews}>
+          <div className="inner">Наступна новина</div>
+        </button>
       </div>
-    );
-  }
+    </div>
+  );
+
 }
 
 const View = (resItem) => {
