@@ -4,6 +4,7 @@
     display: grid;
     grid-template-columns: repeat(2, 50%);
     box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.25);
+    height: 400px;
     &__block {
         padding: 40px 35px;
         display: grid;
@@ -11,8 +12,8 @@
         column-gap: 30px;
     }
     &__img {
-        width: 180px;
-        height: 180px;
+        width: 200px;
+        height: 200px;
         object-fit: cover;
     }
     &__info {

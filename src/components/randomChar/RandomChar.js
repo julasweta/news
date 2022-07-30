@@ -3,12 +3,6 @@ import "./randomChar.scss";
 import NewsService from "../../services/NewsService";
 
 const RandomChar = (props) => {
-
-  /*   */
-
-
-  /*  */
-
   const [resItem, setResItem] = useState({});
 
   useEffect(() => {
@@ -32,6 +26,7 @@ const RandomChar = (props) => {
       updatePost(number);
     });
   };
+
 
 
   return (

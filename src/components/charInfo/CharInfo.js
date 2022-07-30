@@ -1,14 +1,15 @@
 import './charInfo.scss';
+import { Link } from "react-router-dom";
 
 const CharInfo = (props) => {
 
-  const items = props.resPosts.map(item => {
+  const items = props.resPosts.map((item) => {
     return (
       <a key={item.id} href={item.homepage}>
-        <li className="char__comics-item">{item.breed} </li>
+        <li className="char__comics-item">{item.name} </li>
       </a>
     );
-});
+  });
 
 return (
   <div className="char__info">
@@ -17,9 +18,13 @@ return (
       <div>
         <div className="char__info-name">{props.item.name}</div>
         <div className="char__btns">
-          <a href={props.item.homepage} className="button button__main">
+          <Link
+            to="/post" /* { props.item.homepage } */
+            className="button button__main"
+            target="blank"
+          >
             <div className="inner">Детальніше</div>
-          </a>
+          </Link>
           <a href="#" className="button button__secondary">
             <div className="inner">Wiki</div>
           </a>
@@ -28,9 +33,7 @@ return (
     </div>
     <div className="char__descr"></div>
     <div className="char__comics">Більше новин:</div>
-    <ul className="char__comics-list">
-      {items}
-    </ul>
+    <ul className="char__comics-list">{items}</ul>
   </div>
 );
 

@@ -1,20 +1,61 @@
 import './singleComic.scss';
-import xMen from '../../resources/img/x-men.png';
+import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+import NewsService from "../../services/NewsService";
 
-const SingleComic = () => {
-    return (
-        <div className="single-comic">
-            <img src={xMen} alt="x-men" className="single-comic__img"/>
-            <div className="single-comic__info">
-                <h2 className="single-comic__name">X-Men: Days of Future Past</h2>
-                <p className="single-comic__descr">Re-live the legendary first journey into the dystopian future of 2013 - where Sentinels stalk the Earth, and the X-Men are humanity's only hope...until they die! Also featuring the first appearance of Alpha Flight, the return of the Wendigo, the history of the X-Men from Cyclops himself...and a demon for Christmas!?</p>
-                <p className="single-comic__descr">144 pages</p>
-                <p className="single-comic__descr">Language: en-us</p>
-                <div className="single-comic__price">9.99$</div>
-            </div>
-            <a href="#" className="single-comic__back">Back to all</a>
-        </div>
-    )
-}
+
+
+const SingleComic = (props) => {
+  const [resPosts, setResPosts] = useState([]);
+  const [item, setItem] = useState({});
+
+  useEffect(() => {
+    setPosts();
+  }, []);
+
+  useEffect(() => {
+    setPost(props.getPostId);
+  });
+
+  let newsService = new NewsService();
+
+  const  setPosts =()=> {
+     newsService.getAllPosts().then((res) => {
+
+       setResPosts(resPosts => res);
+     });
+  }
+
+   const setPost = (id) => {
+       resPosts.map((post) => {
+         if (id === post.id) {
+           setItem((item) => post);
+         }
+       });
+   };
+
+
+
+  return (
+    <div className="single-comic">
+      {console.log(item)}
+      <img
+        src={item.thumbnail}
+        alt={item.thumbnail}
+        className="single-comic__img"
+      />
+      <div className="single-comic__info">
+        <h2 className="single-comic__name">{item.name}</h2>
+        <p className="single-comic__descr">{item.description}</p>
+        <p className="single-comic__descr">144 pages</p>
+        <p className="single-comic__descr">Language: en-us</p>
+        <div className="single-comic__price">9.99$</div>
+      </div>
+      <Link to="/" className="single-comic__back">
+        До всіх новин
+      </Link>
+    </div>
+  );
+};
 
 export default SingleComic;

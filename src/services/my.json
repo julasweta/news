@@ -1,98 +1,124 @@
-
-{"jsonarray":
-[{
-  "id": 1,
-    "name": "Jennifer",
-    "img": "https://image.shutterstock.com/image-photo/cute-dog-warm-hat-on-600w-2081297005.jpg",
-    "type": "Dog",
-    "breed": "Labrador",
-    "description": "Jennifer is a sweet 2 months old Labrador that is patiently waiting to find a new forever home. This girl really enjoys being able to go outside to run and play, but won't hesitate to play up a storm in the house if she has all of her favorite toys.",
-    "age": "2 months",
-    "inoculations": ["none"],
-    "diseases": ["none"],
-    "parasites": ["none"]
-  },
-  {
-    "id": 2,
-    "name": "Sophia",
-    "img": "https://image.shutterstock.com/image-photo/cute-dog-long-brown-hair-600w-1185584512.jpg",
-    "type": "Dog",
-    "breed": "Shih tzu",
-    "description": "Sophia here and I'm looking for my forever home to live out the best years of my life. I am full of energy. Everyday I'm learning new things, like how to walk on a leash, go potty outside, bark and play with toys and I still need some practice.",
-    "age": "1 month",
-    "inoculations": ["parvovirus"],
-    "diseases": ["none"],
-    "parasites": ["none"]
-  },
-  {
-    "id": 3,
-    "name": "Woody",
-    "img": "https://image.shutterstock.com/image-photo/toy-poodle-dog-600w-1169660995.jpg",
-    "type": "Dog",
-    "breed": "Golden Retriever",
-    "description": "Woody is a handsome 3 1/2 year old boy. Woody does know basic commands and is a smart pup. Since he is on the stronger side, he will learn a lot from your training. Woody will be happier when he finds a new family that can spend a lot of time with him.",
-    "age": "3 years 6 months",
-    "inoculations": ["adenovirus", "distemper"],
-    "diseases": ["right back leg mobility reduced"],
-    "parasites": ["none"]
-  },
-  {
-    "id": 4,
-    "name": "Scarlett",
-    "img": "https://image.shutterstock.com/image-photo/portrait-cute-shih-tzu-dog-600w-1669637623.jpg",
-    "type": "Dog",
-    "breed": "Jack Russell Terrier",
-    "description": "Scarlett is a happy, playful girl who will make you laugh and smile. She forms a bond quickly and will make a loyal companion and a wonderful family dog or a good companion for a single individual too since she likes to hang out and be with her human.",
-    "age": "3 months",
-    "inoculations": ["parainfluenza"],
-    "diseases": ["none"],
-    "parasites": ["none"]
-  },
-  {
-    "id": 5,
-    "name": "Katrine",
-    "img": "https://image.shutterstock.com/image-photo/french-bulldog-playing-flying-disc-600w-1636248298.jpg",
-    "type": "Cat",
-    "breed": "British Shorthair",
-    "description": "Katrine is a beautiful girl. She is as soft as the finest velvet with a thick lush fur. Will love you until the last breath she takes as long as you are the one. She is picky about her affection. She loves cuddles and to stretch into your hands for a deeper relaxations.",
-    "age": "6 months",
-    "inoculations": ["panleukopenia"],
-    "diseases": ["none"],
-    "parasites": ["none"]
-  },
-  {
-    "id": 6,
-    "name": "Timmy",
-    "img": "https://image.shutterstock.com/image-photo/french-bulldog-garden-600w-479242186.jpg",
-    "type": "Cat",
-    "breed": "British Shorthair",
-    "description": "Timmy is an adorable grey british shorthair male. He loves to play and snuggle. He is neutered and up to date on age appropriate vaccinations. He can be chatty and enjoys being held. Timmy has a lot to say and wants a person to share his thoughts with.",
-    "age": "2 years 3 months",
-    "inoculations": ["calicivirus", "viral rhinotracheitis"],
-    "diseases": ["kidney stones"],
-    "parasites": ["none"]
-  },
-  {
-    "id": 7,
-    "name": "Freddie",
-    "img": "https://image.shutterstock.com/image-photo/german-shepherd-dog-on-grass-600w-1513867631.jpg",
-    "type": "Cat",
-    "breed": "British Shorthair",
-    "description": "Freddie is a little shy at first, but very sweet when he warms up. He likes playing with shoe strings and bottle caps. He is quick to learn the rhythms of his human’s daily life. Freddie has bounced around a lot in his life, and is looking to find his forever home.",
-    "age": "2 months",
-    "inoculations": ["rabies"],
-    "diseases": ["none"],
-    "parasites": ["none"]
-  },
-  {
-    "id": 8,
-    "name": "Charly",
-    "img": "https://image.shutterstock.com/image-photo/brown-white-mixed-breed-dog-600w-1598968390.jpg",
-    "type": "Dog",
-    "breed": "Jack Russell Terrier",
-    "description": "This cute boy, Charly, is three years old and he likes adults and kids. He isn’t fond of many other dogs, so he might do best in a single dog home. Charly has lots of energy, and loves to run and play. We think a fenced yard would make him very happy.",
-    "age": "8 years",
-    "inoculations": ["bordetella bronchiseptica", "leptospirosis"],
-    "diseases": ["deafness", "blindness"],
-    "parasites": ["lice", "fleas"]
-  }]}
+{
+  "jsonarray": [
+    {
+      "name": "    ЄС із суботи збільшить імпорт електроенергії з України в 2,5 раза ",
+      "description": "    ЄС із суботи збільшить імпорт електроенергії з України в 2,5 раза ",
+      "thumbnail": "https://www.eurointegration.com.ua/images/doc/c/1/c1de623-4.png",
+      "homepage": "https://www.eurointegration.com.ua/news/2022/07/28/7144038/",
+      "id": 1,
+      "breed": ""
+    },
+    {
+      "name": "    Литва надасть Україні 10 бронемашин, боєприпаси й антидрони ",
+      "description": "    Литва надасть Україні 10 бронемашин, боєприпаси й антидрони ",
+      "thumbnail": "https://www.eurointegration.com.ua/images/doc/1/1/119672a-3.png",
+      "homepage": "https://www.eurointegration.com.ua/news/2022/07/28/7144030/",
+      "id": 2,
+      "breed": ""
+    },
+    {
+      "name": "   Відео  Президент Литви виступив у Києві українською мовою ",
+      "description": "   Відео  Президент Литви виступив у Києві українською мовою ",
+      "thumbnail": "https://www.eurointegration.com.ua/images/doc/f/4/f48c3d0-1.png",
+      "homepage": "https://youtu.be/JKQD9SAOK7I",
+      "id": 3,
+      "breed": ""
+    },
+    {
+      "name": "    Зеленський анонсував створення в Україні свого Коледжу Європи для підготовки європосадовців ",
+      "description": "    Зеленський анонсував створення в Україні свого Коледжу Європи для підготовки європосадовців ",
+      "thumbnail": "https://www.eurointegration.com.ua/images/doc/b/4/b4851c2---------------2022-07-28-165021-220.png",
+      "homepage": "https://www.eurointegration.com.ua/news/2022/07/28/7144023/",
+      "id": 4,
+      "breed": ""
+    },
+    {
+      "name": "    Поїздку нинішньої глави МЗС Бельгії до Криму оплатив фонд доньки Путіна ",
+      "description": "    Поїздку нинішньої глави МЗС Бельгії до Криму оплатив фонд доньки Путіна ",
+      "thumbnail": "https://www.eurointegration.com.ua/images/doc/8/9/891bde8-2.png",
+      "homepage": "https://www.eurointegration.com.ua/news/2022/07/28/7144021/",
+      "id": 5,
+      "breed": ""
+    },
+    {
+      "name": "    Рада підтримала закон про особливий статус поляків в Україні ",
+      "description": "    Рада підтримала закон про особливий статус поляків в Україні ",
+      "thumbnail": "https://www.eurointegration.com.ua/images/doc/9/d/9d4af49-1.png",
+      "homepage": "https://www.eurointegration.com.ua/news/2022/07/28/7144019/",
+      "id": 6,
+      "breed": ""
+    },
+    {
+      "name": "Україна жнивує: на який врожай очікуємо та як зможемо поділитись ним зі світом",
+      "description": "",
+      "thumbnail": "https://images.unian.net/photos/2022_07/thumb_files/370_250_1659106420-7509.jpg",
+      "homepage": "https://www.unian.ua/economics/agro/zhniva-pid-chas-viyni-na-yakiy-vrozhay-ochikuyemo-ta-yak-zmozhemo-podilitis-nim-zi-svitom-novini-11921835.html",
+      "id": 7,
+      "breed": ""
+    },
+    {
+      "name": "Якщо війна триватиме у 2023: НБУ зробив альтернативний прогноз щодо економіки",
+      "description": "",
+      "thumbnail": "https://images.unian.net/photos/2019_04/thumb_files/370_250_1555668386-4002.JPG",
+      "homepage": "https://www.unian.ua/economics/finance/yakshcho-viyna-trivatime-v-2023-roci-rezervi-vpadut-nizhche-10-mlrd-alternativniy-scenariy-nbu-novini-ukrajina-11921802.html",
+      "id": 8,
+      "breed": ""
+    },
+    {
+      "name": "Курс долара скоро зміниться: експерт зробив обнадійливий прогноз",
+      "description": "",
+      "thumbnail": "https://images.unian.net/photos/2022_02/thumb_files/370_250_1644143196-6916.jpg",
+      "homepage": "https://www.unian.ua/economics/finance/kurs-dolara-skoro-zminitsya-ekspert-zrobiv-obnadiyliviy-prognoz-novini-ukrajina-11921727.html",
+      "id": 9,
+      "breed": ""
+    },
+    {
+      "name": "Зірка \"Папіка\" Стас Боклан розповів, що окупанти знищили його квартиру в Маріуполі й вбили колег",
+      "description": "",
+      "thumbnail": "https://images.unian.net/photos/2022_07/thumb_files/370_250_1659097989-2766.png",
+      "homepage": "https://www.unian.ua/lite/stars/zirka-papika-stas-boklan-rozpoviv-shcho-okupanti-znishchili-yogo-kvartiru-v-mariupoli-y-vbili-koleg-11921607.html",
+      "id": 10,
+      "breed": ""
+    },
+    {
+      "name": "Заплакана Злата Огнєвіч представила нову пісню і кліп про рятувальників ДСНС (відео)",
+      "description": "",
+      "thumbnail": "https://images.unian.net/photos/2022_07/thumb_files/370_250_1659094484-1802.png",
+      "homepage": "https://www.unian.ua/lite/music/zaplakana-zlata-ognyevich-predstavila-novu-pisnyu-i-klip-pro-ryatuvalnikiv-dsns-video-11921487.html",
+      "id": 11,
+      "breed": ""
+    },
+    {
+      "name": "Виступ Злати Огнєвіч у ранковому шоу зірвався через загрозу обстрілу",
+      "description": "",
+      "thumbnail": "https://images.unian.net/photos/2022_07/thumb_files/370_250_1659093560-2801.png",
+      "homepage": "https://www.unian.ua/lite/show/vistup-zlati-ognyevich-u-rankovomu-shou-zirvavsya-cherez-zagrozu-obstrilu-11921469.html",
+      "id": 12,
+      "breed": ""
+    },
+    {
+      "name": "Великі зміни: Дніпро-1 офіційно оголосив ім'я нового тренера і підписав шістьох гравців",
+      "description": "",
+      "thumbnail": "https://images.unian.net/photos/2022_07/thumb_files/370_250_1659105658-3592.jpg",
+      "homepage": "https://sport.unian.ua/football/veliki-zmini-dnipro-1-oficiyno-ogolosiv-im-ya-novogo-trenera-i-pidpisav-shistoh-gravciv-novini-futbolu-11921826.html",
+      "id": 13,
+      "breed": ""
+    },
+    {
+      "name": "Ліверпуль - Манчестер Сіті: прогноз і де дивитися матч за Суперкубок Англії",
+      "description": "",
+      "thumbnail": "https://images.unian.net/photos/2022_07/thumb_files/370_250_1659102362-7695.png",
+      "homepage": "https://sport.unian.ua/football/liverpul-manchester-siti-prognoz-i-de-divitisya-match-za-superkubok-angliji-novini-futbolu-11921739.html",
+      "id": 14,
+      "breed": ""
+    },
+    {
+      "name": "Топ-легіонер Динамо продовжить кар'єру в титулованому європейському клубі - ЗМІ",
+      "description": "",
+      "thumbnail": "https://images.unian.net/photos/2019_03/thumb_files/370_250_1552484072-1572.jpg",
+      "homepage": "https://sport.unian.ua/football/top-legioner-dinamo-prodovzhit-kar-yeru-v-titulovanomu-yevropeyskomu-klubi-zmi-novini-futbolu-11921529.html",
+      "id": 15,
+      "breed": ""
+    }
+  ]
+}

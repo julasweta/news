@@ -34,10 +34,11 @@
         }
     }
     &__name {
-        font-weight: bold;
-        font-size: 22px;
-        line-height: 29px;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 19px;
         text-transform: uppercase;
         color: #fff;
+        font-style: italic;
     }
 }

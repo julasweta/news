@@ -1,17 +1,11 @@
 class NewsService {
+
   options = {
     method: "GET",
-    /*  headers: {
-      "Accept-Language": "ua",
-      "X-BingApis-SDK": "true",
-      "X-RapidAPI-Key": "1422af4841msh910ee0fad1ed95bp123d8djsnce14a5644a99",
-      "X-RapidAPI-Host": "bing-news-search1.p.rapidapi.com",
-    }, */
   };
 
-
   getResourse = async (url) => {
-    let res = await fetch(url/* , this.options */);
+    let res = await fetch(url /* , this.options */);
     if (!res.ok) {
       throw new Error(`Could not fetch ${url}, status: ${res.status}`);
     }
@@ -19,17 +13,16 @@ class NewsService {
   };
 
   getAllPosts = async () => {
-    let url = "http://localhost:3000/jsonarray";
-    //let url ="https://newsdata.io/api/1/news?apikey=pub_9575caba4863420bb7991f98c8e25390b0c9&q=ukraine&language=uk";
+    let url = "https://my-json-server.typicode.com/julasweta/repo/db";
+    //let url ="https://julasweta.ucoz.net/my.json";
     const res = await this.getResourse(url);
-    return res.map(this._transformData);
+    return res.jsonarray.map(this._transformData);
   };
 
   getPost = async (id = 0) => {
-
-    let url = "http://localhost:3000/jsonarray";
+    let url = "https://my-json-server.typicode.com/julasweta/repo/db";
     const res = await this.getResourse(url); //дані з json
-    return this._transformData(res[id]);
+    return this._transformData(res.jsonarray[id]);
   };
 
   /*дані записуємо як в  state і передаємо сюди дані в методі getPost*/
@@ -38,9 +31,9 @@ class NewsService {
       name: res.name,
       description: res.description,
       thumbnail:
-        res.img||
+        res.thumbnail ||
         "https://cdn.pixabay.com/photo/2022/03/03/13/00/heart-7045303__480.jpg",
-      homepage: res.link,
+      homepage: res.homepage,
       id: res.id,
       breed: res.breed,
     };
